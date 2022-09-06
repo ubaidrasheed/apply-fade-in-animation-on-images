@@ -1,0 +1,18 @@
+1- Enqueue the below scripts in functions.php with same sequence.
+
+wp_enqueue_script('InViewport', get_bloginfo( 'stylesheet_directory' ) . '/js/isInViewport.min.js', array('jquery'));
+wp_enqueue_script('custom', get_bloginfo( 'stylesheet_directory' ) . '/js/custom.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+
+2- Upload js folder.
+
+3- Use this CSS:
+
+h3 img {
+	opacity: 0;
+	-moz-transition: opacity 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+h3 img.animated {
+	opacity: 1;
+}
